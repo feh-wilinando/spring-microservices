@@ -1,8 +1,7 @@
-package com.github.fehwilinando.alura.user.controller;
+package com.github.fehwilinando.alura.user.features.updatepassword;
 
-import com.github.fehwilinando.alura.user.controller.requests.ChangePasswordRequest;
+import com.github.fehwilinando.alura.user.features.updatepassword.requests.ChangePasswordRequest;
 import com.github.fehwilinando.alura.user.infra.Result;
-import com.github.fehwilinando.alura.user.services.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -12,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-public class UserController {
+public class UpdatePasswordController {
 
-    private final UserService service;
+    private final UpdatePasswordService service;
 
-    public UserController(UserService service) {
+    public UpdatePasswordController(UpdatePasswordService service) {
         this.service = service;
     }
 

@@ -1,6 +1,5 @@
-package com.github.fehwilinando.alura.user.controller.requests;
+package com.github.fehwilinando.alura.user.features.updatepassword.requests;
 
-import com.github.fehwilinando.alura.user.domain.User;
 import com.github.fehwilinando.alura.user.infra.Password;
 
 import javax.validation.constraints.NotBlank;

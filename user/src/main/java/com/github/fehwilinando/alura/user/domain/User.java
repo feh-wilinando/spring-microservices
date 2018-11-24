@@ -1,6 +1,6 @@
 package com.github.fehwilinando.alura.user.domain;
 
-import com.github.fehwilinando.alura.user.controller.requests.ChangePasswordRequest;
+import com.github.fehwilinando.alura.user.features.updatepassword.requests.ChangePasswordRequest;
 import com.github.fehwilinando.alura.user.infra.Password;
 
 import javax.persistence.Entity;

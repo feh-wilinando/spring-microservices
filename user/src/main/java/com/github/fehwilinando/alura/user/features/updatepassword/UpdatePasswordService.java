@@ -1,6 +1,6 @@
-package com.github.fehwilinando.alura.user.services;
+package com.github.fehwilinando.alura.user.features.updatepassword;
 
-import com.github.fehwilinando.alura.user.controller.requests.ChangePasswordRequest;
+import com.github.fehwilinando.alura.user.features.updatepassword.requests.ChangePasswordRequest;
 import com.github.fehwilinando.alura.user.domain.User;
 import com.github.fehwilinando.alura.user.infra.Result;
 import com.github.fehwilinando.alura.user.repositories.UserQueryRepository;
@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class UpdatePasswordService {
 
     private final UserQueryRepository queryRepository;
 
-    public UserService(UserQueryRepository queryRepository) {
-        this.queryRepository = queryRepository;
+    public UpdatePasswordService(UpdatePasswordRepository repository) {
+        this.queryRepository = repository;
     }
 
     public Result<User> updatePassword(ChangePasswordRequest request) {
