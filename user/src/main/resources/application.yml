@@ -2,10 +2,11 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
   datasource:
-    username: root
-    url: jdbc:mysql://localhost/users?createDatabaseIfNotExist=true&useSSL=false
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:users}?createDatabaseIfNotExist=true&useSSL=false
   rabbitmq:
-    port: 5672
-    host: localhost
-    username: guest
-    password: guest
+    port: ${RABBIT_PORT:5672}
+    host: ${RABBIT_HOST:localhost}
+    username: ${RABBIT_USER:guest}
+    password: ${RABBIT_PASSWORD:guest}
